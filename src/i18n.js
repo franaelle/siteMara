@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 
 export const i18n = reactive({
-    locale: localStorage.getItem('site_lang') || 'fr',
+    locale: (typeof window !== 'undefined' && localStorage.getItem('site_lang')) || 'fr',
     translations: {
         fr: {
             nav: { master: "Le Maître Amandji", services: "Secrets & Rituels", gallery: "Le Trésor", blog: "Le Grimoire", consultation: "Consultation" },
@@ -169,7 +169,9 @@ export const i18n = reactive({
 
 export const setLocale = (lang) => {
     i18n.locale = lang
-    localStorage.setItem('site_lang', lang)
+    if (typeof window !== 'undefined') {
+        localStorage.setItem('site_lang', lang)
+    }
 }
 
 export const t = (path) => {
