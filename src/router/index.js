@@ -1,0 +1,25 @@
+export const routes = [
+  { path: '/', component: () => import('../pages/Home.vue'), name: 'Accueil' },
+  { path: '/services', component: () => import('../pages/Services.vue'), name: 'Services' },
+  { path: '/services/1', component: () => import('../pages/Service1.vue'), name: 'Service1' },
+  { path: '/services/2', component: () => import('../pages/Service2.vue'), name: 'Service2' },
+  { path: '/services/3', component: () => import('../pages/Service3.vue'), name: 'Service3' },
+  { path: '/blog', component: () => import('../pages/Blog.vue'), name: 'Grimoire' },
+  { path: '/galerie', component: () => import('../pages/Gallery.vue'), name: 'Galerie' },
+  { path: '/blog/categorie-1', component: () => import('../pages/BlogCategory1.vue'), name: 'BlogCategory1' },
+  { path: '/blog/categorie-2', component: () => import('../pages/BlogCategory2.vue'), name: 'BlogCategory2' },
+  { path: '/blog/categorie-3', component: () => import('../pages/BlogCategory3.vue'), name: 'BlogCategory3' },
+  { path: '/a-propos', component: () => import('../pages/About.vue'), name: 'About' },
+  { path: '/contact', component: () => import('../pages/Contact.vue'), name: 'Contact' },
+  // Blog Articles
+  { path: '/blog/meditation-matinale', component: () => import('../pages/blog/MeditationMatinale.vue') },
+  { path: '/blog/comprendre-son-karma', component: () => import('../pages/blog/Karma.vue') },
+  { path: '/blog/purifier-energie-maison', component: () => import('../pages/blog/PurificationMaison.vue') },
+  { path: '/blog/bienfaits-lacher-prise', component: () => import('../pages/blog/LacherPrise.vue') },
+  { path: '/blog/mission-de-vie', component: () => import('../pages/blog/MissionVie.vue') },
+  { path: '/blog/protection-energies-negatives', component: () => import('../pages/blog/ProtectionEnergies.vue') },
+  { path: '/blog/tarot-psychologique', component: () => import('../pages/blog/TarotPsychologique.vue') },
+  { path: '/blog/pouvoir-des-cristaux', component: () => import('../pages/blog/Cristaux.vue') },
+  { path: '/blog/ouvrir-troisieme-oeil', component: () => import('../pages/blog/TroisiemeOeil.vue') },
+  { path: '/blog/hypersensibilite-spirituelle', component: () => import('../pages/blog/Hypersensibilite.vue') }
+]
